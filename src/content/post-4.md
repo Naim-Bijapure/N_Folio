@@ -2,6 +2,7 @@
 title: "Creating Docker environment"
 date: "2021-03-18"
 draft: false
+featuredImage: ../images/gatsby-astronaut.png
 path: "/blog/cool_post"
 ---
 
@@ -17,3 +18,5 @@ path: "/blog/cool_post"
 let n = "cool"
 console.log("yo man ")
 ```
+
+![test image](../images/gatsby-astronaut.png)

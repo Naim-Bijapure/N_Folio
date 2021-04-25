@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 // import { css } from "@emotion/core"
 import { css } from "@emotion/react"
 import styled from "@emotion/styled"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -35,6 +36,12 @@ const ReadingTime = styled.h5`
 `
 
 const IndexPage = ({ data }) => {
+  console.log("🚀 -> IndexPage -> data", data)
+  // let post = data.markdownRemark
+
+  // let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
+  // console.log("🚀 -> IndexPage -> featuredImgFluid", featuredImgFluid)
+
   return (
     <Layout>
       <SEO title="Blog" />
@@ -57,9 +64,17 @@ const IndexPage = ({ data }) => {
               >
                 <MarkerHeader>{node.frontmatter.title}</MarkerHeader>
               </Link>
+
               <div>
                 <ArticleDate>{node.frontmatter.date}</ArticleDate>
+
                 <ReadingTime> - {node.fields.readingTime.text}</ReadingTime>
+
+                {node.frontmatter.featuredImage && (
+                  <Img
+                    fixed={node.frontmatter.featuredImage.childImageSharp.fixed}
+                  />
+                )}
               </div>
               <p>{node.excerpt}</p>
             </div>
@@ -91,6 +106,13 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             rawDate: date
             path
+            featuredImage {
+              childImageSharp {
+                fixed(width: 200, height: 200) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
           fields {
             slug
