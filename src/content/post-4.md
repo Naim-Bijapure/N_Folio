@@ -1,6 +1,6 @@
 ---
 title: "Creating Docker environment"
-date: "2021-06-06"
+date: "2019-03-18"
 draft: false
 path: "/blog/cool_post"
 ---
