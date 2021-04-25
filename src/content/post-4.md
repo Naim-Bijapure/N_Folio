@@ -2,7 +2,12 @@
 title: "Creating Docker environment"
 date: "2021-06-06"
 draft: false
-path: "/blog/cool post"
+path: "/blog/cool_post"
 ---
 
-cool blog post
+# H1 here we will see how to create this shit
+
+**awesome**
+1.  cool
+2. cool 3 
+3. cool 4 
