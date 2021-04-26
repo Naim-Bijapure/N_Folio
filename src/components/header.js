@@ -5,16 +5,18 @@ import React from "react"
 
 const Content = styled.div`
   max-width: 860px;
-  padding: 1rem 1.0875rem;
+  /* padding: 1rem 1.0875rem; */
+  padding: 0.5rem 0.5rem;
   font-size: 1.2rem;
 `
 
 const NavLink = styled(Link)`
-  color: black;
-  margin-left: 15px;
+  color: ${(props) => props.theme.color.primary};
+  margin: 10px;
   text-decoration: none;
   display: inline-block;
   position: relative;
+  /* border: 1px solid red; */
 
   ::after {
     content: "";
@@ -76,7 +78,9 @@ const Header = ({ siteTitle }) => (
   <SiteHeader>
     <Content>
       <p>
-        <HomeLink to="/">{siteTitle}</HomeLink>
+        {/* <HomeLink to="/">{siteTitle}</HomeLink> */}
+        <NavLink to="/work">work</NavLink>
+        <NavLink to="/">Home</NavLink>
         <NavLink to="/blog">Blog</NavLink>
         {/* <GitHubLink href="https://github.com/nai">
           GitHub
