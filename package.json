@@ -15,6 +15,7 @@
     "gatsby-plugin-netlify": "^3.3.0",
     "gatsby-plugin-offline": "^4.3.0",
     "gatsby-plugin-react-helmet": "^4.3.0",
+    "gatsby-plugin-scroll-reveal": "^0.0.7",
     "gatsby-plugin-sharp": "^3.3.1",
     "gatsby-remark-images": "^5.0.0",
     "gatsby-remark-prismjs": "^5.0.0",
@@ -43,7 +44,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "docker:start": "sudo docker-compose up -d && sudo docker exec -it portfolio_container yarn start  "
   },
   "repository": {
     "type": "git",

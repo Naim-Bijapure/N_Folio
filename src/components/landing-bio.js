@@ -12,18 +12,38 @@ const OuterContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  height: 78vh;
+  height: 50vh;
+
+  /* neumorphism effect */
+  border-radius: 22px;
+  box-shadow: 5px 5px 9px #c5c5c5, -5px -5px 9px #fbfbfb;
+
+  background: ${(props) => props.theme.background.primary};
+  /* border: 1px solid red; */
 `
 
 const Description = styled.p`
+  color: ${(props) => props.theme.color.primary};
   padding: 0;
   margin-bottom: 1rem;
   font-size: 1.4rem;
 `
 
-const NameHeader = styled.h1`
-  font-size: 3.5rem;
-  margin-bottom: 0;
+const AboutMe = styled.p`
+  padding: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+`
+
+const NameHeader = styled.h3`
+  color: #454545;
+  font-size: 2rem;
+  margin-bottom: 4px;
+`
+const HeaderText = styled.h3`
+  color: ${(props) => props.theme.color.primary};
+  margin-bottom: 2px;
+  /* border: 1px solid red; */
 `
 
 const LandingBio = () => (
@@ -38,9 +58,15 @@ const LandingBio = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <OuterContainer>
-        <Container>
+        <Container
+          data-sal="zoom-in"
+          data-sal-delay="200"
+          data-sal-duration="1000"
+          data-sal-easing="ease-out-back"
+        >
+          <HeaderText>Hi,It's</HeaderText>
           <NameHeader>{data.site.siteMetadata.title}</NameHeader>
           <Description>{data.site.siteMetadata.subtitle}</Description>
         </Container>
