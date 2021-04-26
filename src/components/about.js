@@ -16,13 +16,15 @@ const OuterContainer = styled.div`
   justify-content: center;
   flex-direction: row;
   height: 50vh;
-  margin-top: 1rem;
+  margin-top: -1rem;
 `
 
 const Description = styled.p`
   padding: 0;
-  margin-top: 3rem;
-  font-size: 1rem;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+
+  color: ${(props) => props.theme.color.primary};
 `
 
 const NameHeader = styled.h1`
@@ -43,11 +45,13 @@ const Title = styled.div`
   text-align: center;
 
   font-size: 1.2rem;
-  color: #919191;
 
+  color: ${(props) => props.theme.color.secondary};
+
+
+  background: ${(props) => props.theme.background.primary};
   border-radius: 10px;
-  background: #e0e0e0;
-  box-shadow: inset 5px 5px 23px #c1c1c1, inset -5px -5px 23px #ffffff;
+  box-shadow: -6px -6px 16px #fff, 6px 6px 16px #d1cdc7;
 
   /* border: 1px solid red; */
 `
@@ -58,7 +62,7 @@ const About = () => (
       <Title>About Me</Title>
       <Description
         data-sal="slide-up"
-        data-sal-delay="500"
+        data-sal-delay="100"
         data-sal-duration="2000"
         data-sal-easing="ease-out-back"
       >
