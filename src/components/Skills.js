@@ -28,13 +28,13 @@ const OuterContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
-  height: 50vh;
+  height: 60vh;
   margin-top: -2rem;
 `
 
 const Description = styled.p`
   padding: 0;
-  margin-top: 1rem;
+  margin-top: 2rem;
   font-size: 1rem;
 
   display: flex;
@@ -49,11 +49,9 @@ const NameHeader = styled.h1`
 
 const Title = styled.div`
   position: relative;
+  top: 1rem;
   height: 2rem;
   width: 15rem;
-
-  font-size: 1.2rem;
-  color: #919191;
 
   display: flex;
   flex-direction: row;
@@ -61,9 +59,16 @@ const Title = styled.div`
   justify-content: center;
   text-align: center;
 
-  border-radius: 10px;
+  font-size: 1.2rem;
+  color: ${(props) => props.theme.color.secondary};
+
+  /* border-radius: 10px;
   background: #e0e0e0;
-  box-shadow: inset 5px 5px 23px #c1c1c1, inset -5px -5px 23px #ffffff;
+  box-shadow: inset 5px 5px 23px #c1c1c1, inset -5px -5px 23px #ffffff; */
+
+  background: ${(props) => props.theme.background.primary};
+  border-radius: 10px;
+  box-shadow: -6px -6px 16px #fff, 6px 6px 16px #d1cdc7;
 
   /* border: 1px solid red; */
 `
