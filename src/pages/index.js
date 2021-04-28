@@ -1,6 +1,10 @@
 import React from "react"
-import About from "../components/about"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
+
+
+import About from "../components/about"
 import LandingBio from "../components/landing-bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"

@@ -40,7 +40,8 @@ const Love = styled.span`
 const theme = {
   background: {
     // primary: "#e0e0e0",
-    primary: "#efeeee",
+    // primary: "#efeeee" // good
+    primary: "#f0f0f0", // new try
   },
   color: {
     primary: "#666666",

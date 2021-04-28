@@ -109,7 +109,6 @@ const LandingBio = () => (
           data-sal-delay="200"
           data-sal-duration="1000"
           data-sal-easing="ease-out-back"
-          data-sal-once
         >
           <HeaderText>Hi,It's</HeaderText>
           <NameHeader>{data.site.siteMetadata.title}</NameHeader>
