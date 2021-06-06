@@ -4,6 +4,9 @@ date: "2019-03-17"
 draft: false
 path: "/work/cool-work"
 type: "project"
+images:
+  - image: ../project_images/project-1.png
+  - image: ../project_images/project-2.png
 ---
 
 # H1

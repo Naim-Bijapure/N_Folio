@@ -18,15 +18,24 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `project-pages`,
-        path: `${__dirname}/src/projects`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `project_pages`,
+        path: `${__dirname}/src/projects`,
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `project_images`,
+        path: `${__dirname}/src/project_images`,
       },
     },
     `gatsby-transformer-sharp`,

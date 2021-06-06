@@ -1,12 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "@emotion/styled"
-import Slider from "react-slick"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-import NImage from "../images/gatsby-astronaut.png"
+import ProjectCarousel from "../components/ProjectCarousel"
 
 const Content = styled.div`
   margin: 0 auto;
@@ -76,26 +74,8 @@ export default ({ data }) => {
         {/* <HeaderDate>
           {post.frontmatter.date} - {post.fields.readingTime.text}
         </HeaderDate> */}
-        <Slider {...settings}>
-          <div>
-            <img src={NImage} alt="cool" />
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
+
+        <ProjectCarousel images={post.frontmatter.images} />
 
         <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </Content>
@@ -112,6 +92,20 @@ export const pageQuery = graphql`
         date(formatString: "DD MMMM, YYYY")
         path
         title
+        type
+        images {
+          image {
+            childImageSharp {
+              # fixed(width: 200, height: 200) {
+              #   ...GatsbyImageSharpFixed
+              # }
+              fluid(maxWidth: 500, maxHeight: 300, quality: 100) {
+                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluidLimitPresentationSize
+              }
+            }
+          }
+        }
       }
       fields {
         readingTime {
